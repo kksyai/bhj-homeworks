@@ -36,7 +36,8 @@ chatInput.addEventListener('keyup', (event)=>{
         <div class="message__text">${messageText[randomInteger(messageText.length - 1)]}</div>
     </div>`
 
-        messages.lastElementChild.scrollIntoView(false);
+        //messages.lastElementChild.scrollIntoView(false);
+        messages.parentElement.scrollTop = 9999;
     }
 })
 
