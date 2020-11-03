@@ -1,12 +1,9 @@
 const textArea = document.getElementById('editor');
 
-if(localStorage.getItem('text') === null){
-    textArea.value = null;
-}
+textArea.innerText = localStorage.getItem('text');
 
-textArea.addEventListener('change', ()=>{
-    let inputText = textArea.value;
-    localStorage.setItem('text', inputText);
+textArea.addEventListener('keyup', ()=>{
+    localStorage.setItem('text', textArea.value);
+    textArea.innerText = localStorage.text;
 })
 
-textArea.innerText = localStorage.text;
